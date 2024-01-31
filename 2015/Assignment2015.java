@@ -37,20 +37,8 @@ public class Assignment2015 {
 	}
 
     public static void main(String[] args) {
-        RectangularPrism[] boxes = readIn("2015/2015.txt");
+        RectangularPrism[] boxes = readIn("2015/input.txt");
         
-        int totalPaper = 0;
-		for (RectangularPrism box : boxes) {
-			totalPaper += box.surfaceArea();
-			totalPaper += box.smallestSide();
-		}
-		System.out.println("Total wrapping paper: " + totalPaper);
-
-		int totalRibbon = 0;
-		for (RectangularPrism box : boxes) {
-			totalRibbon += box.shortestDist();
-			totalRibbon += box.volume();
-		}
-		System.out.println("Total ribbon length: " + totalRibbon);
+        // Your work goes here!
     }
 }

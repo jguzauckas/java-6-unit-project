@@ -8,24 +8,17 @@ Source 3: [Advent of Code - 2017 - Day 1](https://adventofcode.com/2017/day/1)
 
 ---
 
+## For Each Problem
 
-
----
-
-## Interacting with this Repository
-
-Your solution to this problem will be coded in the `Assignment.java` file. It already has existing code set up to initialize the `String` variable `puzzleInput` so you can begin working.
-
-To see the puzzle input, look in the `string.txt` file. Note that the `String` of parentheses is roughly 7,000 characters long, so this is not a puzzle you can calculate the answer to by hand (at least not reasonably).
-
-Since it will not be easy to determine the answer by hand, the answer to your input has been included in the `answer.txt` file for your reference. Use this to determine if you got the final answers right.
-
-Running the `Setup.java` file will randomly generate a new string of parentheses in the `string.txt` file (and therefore the `String` you are coding with), as well as a new answer based on that new `String` in the `answer.txt` file.
+Each of the problems is provided in its own folder, containing the following resources:
+- `Assignment201X.md` - Description of the problem and what you need to know about it.
+- `input.txt` - The problem input to be processed for the answer.
+- `Assignment201X.java` - The main file for work regarding the answer to be put. **Do not edit any existing code in the file, just add your code where there is a comment to do so.**
+- `answer.txt` - The correct answer to the current problem input. Your answer must match the answer in this file exactly (down to the sentence!).
+- Other files might include class files for custom classes that you might write to help solve the problem.
 
 ---
 
-## Your Answer
+## Testing Solutions
 
-You should format your answer based on the formatting in `answer.txt`, down to the capitalization and punctuation.
-
-Verify that your work is accurate once you think you are done, by alternating between running `Assignment.java`, checking your answer via the `answer.txt` file, and then running `Setup.java` to shuffle the input and test again. This will ensure that you have a solid, working solution and not just one that works in particular situations.
+A correct result for these problems is not just hitting run once and seeing it produce the right answer per the `answer.txt` file. Running the `Setup.java` file will create a brand new input for you to try out, as well as its accompanying answer. You should then run your solution again to see if the answer still matches despite the different input values. If it matches after cycling multiple versions of the input, then this is a great sign that your solution is correct.
