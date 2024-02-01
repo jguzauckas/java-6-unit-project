@@ -61,11 +61,81 @@ public class Setup {
         return answer;
     }
 
+    public static String generate2017(int size) {
+        String in = "";
+        for (int i = 0; i < size; i++) {
+            in += (int) (Math.random() * 10);
+        }       
+        return in;
+    }
+
+    public static String solve2017(String in) {
+        int[] input = new int[in.length()];
+		for (int i = 0; i < in.length(); i++) {
+			input[i] = Integer.parseInt(in.substring(i, i + 1));	
+		}
+		int total = 0;
+        for (int i = 0; i < input.length; i++) {
+			if (input[i] == input[(i + 1) % input.length]) {
+				total += input[i];
+			}
+		}
+		int total2 = 0;
+		for (int i = 0; i < input.length; i++) {
+			if (input[i] == input[(i + input.length / 2) % input.length]) {
+				total2 += input[i];
+			}
+		}
+        String answer = "The sum of digits that match the next digit is " + total + ".\n";
+        answer += "The sum of digits that match their halfway counterpart is " + total2 + ".";
+        return answer;
+    }
+
+    public static String generate2019(int size) {
+        String in = "";
+        for (int i = 0; i < size; i++) {
+            in += (int) (Math.random() * 199999) + 1;
+            in += "\n";
+        }       
+        return in.trim();
+    }
+
+    public static String solve2019(String in) {
+        String[] in1 = in.split("\n");
+        int[] input = new int[in1.length];
+        for (int i = 0; i < in1.length; i++) {
+            input[i] = Integer.parseInt(in1[i]);
+        }
+        int total = 0;
+		for (int mass: input) {
+			total += (int) ((double) mass / 3) - 2;
+		}
+
+		int total2 = 0;
+		for (int mass: input) {
+			int fuel = (int) ((double) mass / 3) - 2;
+			while (fuel > 0) {
+				total2 += fuel;
+				fuel = (int) ((double) fuel / 3) - 2;
+			}
+		}
+
+        String answer = "The sum of fuel requirements for all modules is " + total + " fuel.\n";
+        answer += "The sum of fuel requirements for all modules including fuel is " + total2 + " fuel.";
+        return answer;
+    }
+
     public static void main(String[] args) {
         String p2015 = generate2015(1000);
+        String p2017 = generate2017(10000);
+        String p2019 = generate2019(200);
         try {
             writeStringToFile(p2015, "2015/input.txt");
             writeStringToFile(solve2015(p2015), "2015/answer.txt");
+            writeStringToFile(p2017, "2017/input.txt");
+            writeStringToFile(solve2017(p2017), "2017/answer.txt");
+            writeStringToFile(p2019, "2019/input.txt");
+            writeStringToFile(solve2019(p2019), "2019/answer.txt");
         } catch (IOException e1) {
 			e1.printStackTrace();
 		}

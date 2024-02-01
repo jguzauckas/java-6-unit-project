@@ -1,0 +1,2 @@
+The sum of fuel requirements for all modules is 6798990 fuel.
+The sum of fuel requirements for all modules including fuel is 10192857 fuel.

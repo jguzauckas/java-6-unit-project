@@ -1,2 +1,0 @@
-Part A: You end up on floor 102.
-Part B: You first enter the basement on instruction number 1155.

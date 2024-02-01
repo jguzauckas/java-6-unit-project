@@ -1,0 +1,2 @@
+The sum of digits that match the next digit is 4400.
+The sum of digits that match their halfway counterpart is 4630.
